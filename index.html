@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm Lab Task 2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #222;
+            color: #fff;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(50, 50, 50, 0.85);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #ffeb3b;
+        }
+        h1, h2 {
+            color: #ffeb3b;
+        }
+        .steps {
+            background: rgba(60, 60, 60, 0.7);
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #ffeb3b;
+        }
+        .steps ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .steps li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .steps li::before {
+            content: "✔";
+            color: #ffeb3b;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        .images {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .images img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #444;
+            margin-top: 30px;
+            color: #aaa;
+        }
+        .portfolio-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #ffeb3b;
+            color: #222;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .portfolio-link:hover {
+            background-color: #ffc107;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Midterm Lab Task 2</h1>
+            <p>Data Cleaning & Transformation Using Power Query Editor</p>
+        </header>
+
+        <section class="steps">
+            <h2>Step 1 - Cleaning the Data</h2>
+            <ul>
+                <li>Obtain raw data and open it in Power Query Editor.</li>
+                <li>Add necessary columns like Min Sal, Max Sal, and Role Type.</li>
+                <li>Split complex columns (Salary Estimate, Location, Size).</li>
+                <li>Convert columns to correct data types (Currency, Text).</li>
+                <li>Filter out negative values in Competitors, Revenue, and Industries.</li>
+                <li>Remove unnecessary columns and redundant descriptions.</li>
+                <li>Save the M Language to a notepad.</li>
+            </ul>
+        </section>
+
+        <section class="images">
+            <h2>Before & After Cleaning</h2>
+            <img src="https://raw.githubusercontent.com/Moses032005/EDM_Moses-David/refs/heads/main/Midterm%20Lab%20Task%202/Images/before.PNG" alt="Before Cleaning">
+            <img src="https://github.com/Moses032005/EDM_Moses-David/blob/main/Midterm%20Lab%20Task%202/Images/after1.png?raw=true" alt="After Cleaning.1">
+            <img src="https://raw.githubusercontent.com/Moses032005/EDM_Moses-David/refs/heads/main/Midterm%20Lab%20Task%202/Images/after2.png" alt="After Cleaning.2">
+        </section>
+
+        <section class="steps">
+            <h2>Step 2 - Reshaping & Grouping Data</h2>
+            <ul>
+                <li>Duplicate and reference queries (Sal By Role Type, Size, State).</li>
+                <li>Select necessary columns (Role Type, Size, Min Sal, Max Sal).</li>
+                <li>Convert salary columns to Currency format.</li>
+                <li>Multiply min/max salaries by 1000.</li>
+                <li>Group data by Role Type, Size, and State Full Name.</li>
+                <li>Merge State Mapping with Unclean DS Jobs using State Abbreviation.</li>
+                <li>Rename merged column and remove nulls.</li>
+                <li>Review query dependencies.</li>
+            </ul>
+        </section>
+        
+        
+        <section class="images">
+            <h2>Sample Tables</h2>
+            <img src="https://github.com/Moses032005/EDM_Moses-David/blob/main/Midterm%20Lab%20Task%202/Images/salbyroletypedup.png?raw=true" alt="salbyroletypedup">
+            <img src="https://github.com/Moses032005/EDM_Moses-David/blob/main/Midterm%20Lab%20Task%202/Images/salbysizeref.png?raw=true" alt="salbysizeref">
+            <img src="https://github.com/Moses032005/EDM_Moses-David/blob/main/Midterm%20Lab%20Task%202/Images/salbysizeroletypedup.png?raw=true" alt="salbysizeroletypedup">
+            <img src="https://github.com/Moses032005/EDM_Moses-David/blob/main/Midterm%20Lab%20Task%202/Images/state.PNG?raw=true" alt="state">
+        </section>
+
+        <section class="images">
+            <h2>Query Dependencies</h2>
+            <img src="https://github.com/Moses032005/EDM_Moses-David/blob/main/Midterm%20Lab%20Task%202/Images/Screenshot%20(Q).png?raw=true" alt="Query Dependencies">
+        </section>
+
+        <footer>
+            <p>Midterm Lab Task 2 | BSIS Student</p>
+            <a href="https://moses032005.github.io/EDM_Moses-David/" class="portfolio-link">Back to Portfolio</a>
+        </footer>
+    </div>
+</body>
+
+</html>
